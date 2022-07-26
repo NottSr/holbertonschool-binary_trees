@@ -6,8 +6,6 @@
  * @tree: Pointer to the node to check
  * @func: Pointer to a function to call for each node. The value
  * in the node must be passed as a parameter to this function.
- *
- * Return: 1 if node is root, otherwise 0
  */
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
@@ -15,6 +13,6 @@ void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 		return;
 
 	binary_tree_inorder(tree->left, func);
-    func(tree->n);
+	func(tree->n);
 	binary_tree_inorder(tree->right, func);
 }
